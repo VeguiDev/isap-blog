@@ -108,6 +108,40 @@ Este es el post que cree en el `README.md` para mostrar como hacerlo, deberías 
 
 Una vez creado el archivo y escrita esta información usa `ctrl+s` para guardar e inmediatamente podrás ver los cambios que hagas 🌟.
 
+## Autores
+
+Por ultimo los autores de los artículos deben estar en el archivo `authors.yml`. Te explico la sintaxis del archivo.
+
+```yml
+veguidev: # Identificador del autor (debe ser único y no uses ni espacios ni mayúsculas)
+  name: Juan Manuel Menta # Nombre visible del autor
+  title: Ex-Alumno del Padua @ 2023 # Rol del autor en la organización
+  url: https://github.com/VeguiDev # Link alguna red social (opcional)
+  image_url: https://vegui.dev/logo.png # Imagen logo/foto (opcional) y puede ser local para usar una foto local usa (/img/nombre-del-archivo.png) y lo tenes que poner en la carpeta `static/img`
+```
+
+Ejemplo con otro autor.
+
+```yml
+veguidev:
+  name: Juan Manuel Menta
+  title: Ex-Alumno @ 2023
+  url: https://github.com/VeguiDev
+  image_url: https://vegui.dev/logo.png
+
+yamil:
+  name: Lautaro Gomez
+  title: Ex-Alumno @ 2023
+```
+
+Ejemplo de cabeza del articulo creada por los dos.
+
+````yaml
+---
+#... resto de la cabeza
+authors: [veguidev, yamil]
+#... resto de la cabeza
+---
 ## Producción
 
 Tus cambios están listos?, vamos a generar los archivos para poner en la página. En el terminal ejecuta el siguiente comando.
@@ -115,7 +149,6 @@ Tus cambios están listos?, vamos a generar los archivos para poner en la págin
 ```bash
 
 npm run build
-
-```
+````
 
 y listo, en la carpeta `build` está todo tu contenido.
